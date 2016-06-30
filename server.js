@@ -4,9 +4,10 @@ var mongoose = require('mongoose');
 var erc = require('express-route-controller');
 var bodyParser = require('body-parser');
 var cors = require('cors')
+var morgan = require('morgan')
 //mongoose.connect('mongodb://localhost:27017/my_database');
 //mongoose.connect('mongodb://kundan:kundan123@ds021943.mlab.com:21943/doctor_db');
-
+app.use(morgan('dev'));
 
 var options = {
   db: { native_parser: true },
@@ -26,7 +27,9 @@ erc(app, {
     controllers: __dirname + '/routes',
     routes: {        
         '/addTabCategory': { action: 'tabApis#addTabCategory', method: 'post'},
-        '/getTabCategories': { action: 'tabApis#getTabCategories'}
+        '/getTabCategories': { action: 'tabApis#getTabCategories'},
+        '/addTablet': { action: 'tabApis#addTablet', method: 'post'},
+        '/getTablets': { action: 'tabApis#getTablets'}
         
     }
 });

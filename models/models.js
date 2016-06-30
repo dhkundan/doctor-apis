@@ -11,8 +11,18 @@ var tabletCategorySchema = new Schema({
 
 var tabCategory = mongoose.model('tabCategory', tabletCategorySchema);
 
+var tabletSchema = new Schema({
+    name: { type: String, required: true},
+    desc: {type: String},
+    catId:{type: ObjectId, required: true},
+    date: { type: Date, default: Date.now, required: true}  
+});
+ 
+
+var tablet = mongoose.model('tablet', tabletSchema);
+
 module.exports = {
     
-    tabCategory:tabCategory
-    
+    tabCategory:tabCategory,
+    tablet:tablet
 }

@@ -1,0 +1,33 @@
+{
+  "name": "docapi",
+  "version": "1.0.0",
+  "description": "A test api.",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "cors": "^2.7.1",
+    "express": "^4.13.4",
+    "express-route-controller": "^0.0.4",
+    "mongoose": "^4.4.19",
+    "morgan": "^1.7.0",
+    "nodemon": "^1.9.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhkundan/test-api.git"
+  },
+  "keywords": [
+    "docapi"
+  ],
+  "author": "kundan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dhkundan/test-api/issues"
+  },
+  "homepage": "https://github.com/dhkundan/test-api#readme"
+}
