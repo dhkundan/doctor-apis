@@ -29,7 +29,8 @@ erc(app, {
         '/addTabCategory': { action: 'tabApis#addTabCategory', method: 'post'},
         '/getTabCategories': { action: 'tabApis#getTabCategories'},
         '/addTablet': { action: 'tabApis#addTablet', method: 'post'},
-        '/getTablets': { action: 'tabApis#getTablets'}
+        '/getTablets': { action: 'tabApis#getTablets'},
+        '/removeTablet': { action: 'tabApis#removeTablet'}
         
     }
 });

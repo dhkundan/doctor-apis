@@ -63,4 +63,15 @@ module.exports = {
     
     });
     },
+    removeTablet : function(req, res){
+        
+        tablet.remove({_id:req.query.id}, function(err, removed){
+            if(!err){
+                res.status(200).send({status: 0, message: 'Tablet Removed'});
+            }
+            else{
+                res.status(200).send({status:1, message: 'Some error occurred', err: err});
+            }
+        });
+    }
 }
